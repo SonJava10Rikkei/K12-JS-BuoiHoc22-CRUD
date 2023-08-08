@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.content div {
+    margin: 5px;
+}
+
+/* 
+.vuong {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.chu-nhat {
+    width: 200px;
+    height: 100px;
+    background: rgb(0, 255, 0);
+}
+
+.tron {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border-radius: 50%;
+} 
+*/
+
+
+/* 
+1 ve hinh tam giac mau blue 
+2 ve mui ten sang trai mau yellow
+3 ve mui ten phai mau green */
+/* 
+
+
+.tam-giac {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.mui-ten-trai {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+.mui-ten-phai {
+    width: 100px;
+    height: 100px;
+    background: green;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+ */
+
+.content2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 255, 0.509);
+}
+
+
+
+.text-class {
+    line-height: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+p {
+    margin: 10px;
+}
+
+img.a {
+    vertical-align: baseline;
+}
+
+img.b {
+    vertical-align: text-top;
+}
+
+img.c {
+    vertical-align: text-bottom;
+}
+
+img.d {
+    vertical-align: sub;
+}
+
+img.e {
+    vertical-align: super;
+}
+
+img.d {
+    vertical-align: middle;
+}
