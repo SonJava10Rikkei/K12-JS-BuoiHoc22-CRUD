@@ -9,11 +9,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <style>
-  
     table {
         width: 80%;
     }
-
     table,
     th,
     td {
@@ -22,12 +20,12 @@
         margin: 10px;
         text-align: center;
     }
-
-
-
     input {
         width: 100%;
         margin: 10px;
+    }
+    #nameDelete {
+        color: red;
     }
 </style>
 
@@ -45,7 +43,9 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add new user</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">
+                       Add New People
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -62,29 +62,31 @@
             </div>
         </div>
     </div>
-
     <!-- Modal Delete-->
     <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalDelete">Modal title delete</h5>
+                    <h4 class="modal-title">Modal delete</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div>
+                    <p style="text-align: center;">Are you sure you want to delete this name: <span
+                            id="nameDelete"></span> ?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                         id="closeDelete">Close</button>
-                    <button type="button" class="btn btn-danger" onclick="btnDeleteFunction()">Delete</button>
+                    <button type="button" class="btn btn-danger" onclick="actionDeleteFunction()">Delete</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 <script src="buoi22.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
 </html>

@@ -24,6 +24,7 @@ const table = document.querySelector("table");
 function renderHTML() {
   const dataHTML = `
     <thead>
+        <th>No.</th>
         <th>Name</th>
         <th>Age</th>
         <th>Address</th>
@@ -35,6 +36,7 @@ function renderHTML() {
       .map(function (item, index) {
         return `
         <tr >
+          <td>${index + 1}</td>
           <td>${item.name}</td>
           <td>${item.age}</td>
           <td>${item.address}</td>
@@ -52,6 +54,7 @@ function renderHTML() {
               type="button" class="btn btn-danger"
               data-bs-toggle="modal"
               data-bs-target="#exampleModalDelete"
+              onclick="deleteFunction(${index})"
             > 
               Delete
             </button>
@@ -69,8 +72,8 @@ const name = document.getElementById("name");
 const age = document.getElementById("age");
 const address = document.getElementById("address");
 const hobbies = document.getElementById("hobbies");
-let indexEdit;
 
+let indexEdit;
 function saveFunction() {
   const newData = {
     name: name.value,
@@ -102,6 +105,8 @@ function openModalAdd() {
 }
 
 function openModalEdit(index) {
+  var element = document.getElementById("exampleModalLabel");
+  element.innerHTML = "Edit People";
   indexEdit = index;
   name.value = peopleArray[index].name;
   age.value = peopleArray[index].age;
@@ -109,7 +114,13 @@ function openModalEdit(index) {
   hobbies.value = peopleArray[index].hobbies.join(", ");
 }
 
-function btnDeleteFunction(index) {
+function deleteFunction(index) {
+  var namePeople = peopleArray[index].name;
+  var element = document.getElementById("nameDelete");
+  element.innerHTML = namePeople;
+}
+
+function actionDeleteFunction(index) {
   peopleArray.splice(index, 1);
   const close = document.getElementById("closeDelete");
   close.click();
